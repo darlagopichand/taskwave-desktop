@@ -1,0 +1,173 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: #f6f6f6;
+  color: #0f0f0f;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+/* Input Area */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #396cd8;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #274db5;
+}
+
+/* Kanban Board Layout */
+.board {
+  display: flex; /* This puts columns side-by-side */
+  gap: 15px;
+  height: 85vh;
+}
+
+.column {
+  flex: 1;
+  background-color: #e2e4e9;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.task-list {
+  flex-grow: 1;
+  padding-top: 10px;
+  min-height: 300px; /* Keeps the drop zone big */
+  background-color: transparent; /* No more red background */
+  border: none; /* No more red dashed lines */
+}
+
+/* The Draggable Card */
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: grab; /* Shows the grab hand cursor */
+  user-select: none;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+/* Style for the Card content */
+.card {
+    display: flex;
+    justify-content: space-between; /* Pushes X to the right */
+    align-items: center;
+    position: relative; /* Needed for positioning */
+}
+
+/* The Delete Button */
+.delete-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 18px; /* Centers the X */
+    text-align: center;
+    margin-left: 10px;
+}
+
+/* Style for the Card content */
+.card {
+    display: flex;
+    justify-content: space-between; /* Pushes X to the right */
+    align-items: center;
+    position: relative; /* Needed for positioning */
+}
+
+/* The Delete Button */
+.delete-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 18px; /* Centers the X */
+    text-align: center;
+    margin-left: 10px;
+}
+
+/* Style for the Card content */
+/* Card Container */
+.card {
+    background: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: grab;
+    
+    /* FLEXBOX MAGIC STARTS HERE */
+    display: flex;             /* 1. Enable Flexbox */
+    justify-content: space-between; /* 2. Push text left, button right */
+    align-items: center;       /* 3. Center them vertically */
+    gap: 10px;                 /* 4. Add space between text and button */
+}
+
+/* Delete Button (Red Circle) */
+.delete-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;       /* Slightly larger for easy clicking */
+    height: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    
+    /* Perfect Center for the X */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;    /* Prevents button from getting squished by long text */
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
